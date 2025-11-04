@@ -1,124 +1,150 @@
-<!DOCTYPE html>
-<html lang="it">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alessandro Santirocchi — Research · Teaching · Publications</title>
-  <meta name="description" content="Cognitive psychology, memory, misinformation, deepfakes, decision-making.">
+  <title>Alessandro Santirocchi</title>
+  <meta name="description" content="Postdoctoral Researcher in Cognitive Psychology at Sapienza University of Rome. My research focuses on memory, misinformation, and decision-making." />
+  <meta property="og:image" content="https://alessandrosantirocchi.github.io/me.jpg" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
   <style>
-    :root{
-      --bg:#f7f7fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--brand:#1d4ed8;--ring:rgba(29,78,216,.12);--r:14px
+    :root {
+      --bg: #f4f4f5;
+      --fg: #0f172a;
+      --muted: #475569;
+      --link: #0ea5e9;
+      --border: #e2e8f0;
+      --accent: #111827;
     }
-    *{box-sizing:border-box}html,body{margin:0;padding:0}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:linear-gradient(#fff, var(--bg));line-height:1.6}
-    .wrap{max-width:980px;margin:0 auto;padding:24px}
-    /* nav */
-    .nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter:saturate(160%) blur(6px);border-bottom:1px solid #eee}
-    .nav-in{max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 24px}
-    .brand a{font-weight:800;text-decoration:none;color:#111827}
-    .menu{display:flex;gap:10px;flex-wrap:wrap}
-    .menu a{padding:8px 12px;border-radius:999px;text-decoration:none;color:var(--text)}
-    .menu a:hover{background:#eef2ff;color:#1d4ed8}
-    /* hero */
-    .hero{display:grid;grid-template-columns:100px 1fr;gap:18px;align-items:center;padding:40px 0 10px}
-    .avatar{width:100px;height:100px;border-radius:50%;display:grid;place-items:center;background:#e5e7eb;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.06)}
-    .hero h1{margin:0 0 4px;font-size:clamp(22px,4vw,34px)}
-    .hero p{margin:0;color:var(--muted)}
-    .chips{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
-    .chip{padding:6px 10px;border-radius:999px;background:#eef2ff;color:#1d4ed8;font-size:13px;border:1px solid rgba(29,78,216,.15)}
-    .btns{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;padding:10px 14px;border-radius:12px;font-weight:600;border:1px solid #e5e7eb;box-shadow:0 8px 20px var(--ring)}
-    .btn.primary{background:var(--brand);color:#fff;border:none}
-    /* sections */
-    section{padding:22px 0}
-    h2{margin:0 0 12px;font-size:20px}
-    .card{background:var(--card);border-radius:var(--r);padding:16px;border:1px solid #eee;box-shadow:0 8px 24px rgba(0,0,0,.05)}
-    .grid{display:grid;gap:14px}
-    .g-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .g-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    @media (max-width:860px){.hero{grid-template-columns:1fr;text-align:center}.avatar{margin:0 auto}.g-3,.g-2{grid-template-columns:1fr}}
-    .list{list-style:none;margin:0;padding:0}
-    .list li{padding:8px 0;border-bottom:1px dashed #eee}
-    .list li:last-child{border-bottom:none}
-    .meta{color:var(--muted);font-size:13px}
-    footer{padding:34px 0 60px;text-align:center;color:var(--muted);font-size:13px}
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1020;
+        --fg: #e5e7eb;
+        --muted: #94a3b8;
+        --link: #38bdf8;
+        --border: #1f2937;
+        --accent: #f8fafc;
+      }
+    }
+    html { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    body { margin: 0; background: var(--bg); color: var(--fg); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.25rem; }
+
+    header { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; margin-bottom: 2.25rem; }
+    .profile-rect { max-width: 250px; border-radius: 8px; object-fit: cover; width: 100%; height: auto; border: 1px solid var(--border); }
+    .header-text { flex: 1; }
+
+    h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.1; margin: 0; letter-spacing: -0.01em; }
+    .tagline { color: var(--muted); margin: 0.25rem 0 1rem; font-size: 1.05rem; }
+    nav { margin-top: 0.75rem; }
+    nav a { color: var(--muted); text-decoration: none; margin-right: 0.9rem; }
+    nav a:hover, nav a:focus { color: var(--fg); text-underline-offset: 3px; text-decoration: underline; }
+
+    .btn { display: inline-block; border: 1px solid var(--border); padding: 0.55rem 0.9rem; border-radius: 999px; text-decoration: none; color: var(--fg); background: transparent; transition: background 120ms ease-in-out, color 120ms, border-color 120ms; }
+    .btn:hover, .btn:focus { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+    section { padding: 1.25rem 0; border-top: 1px solid var(--border); }
+    section:first-of-type { border-top: 0; }
+    h2 { font-size: 1.15rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 0.75rem; opacity: 0.9; }
+
+    a { color: var(--link); }
+    a:hover, a:focus { text-underline-offset: 3px; }
+
+    ul { padding-left: 1.2rem; }
+    .pubs { list-style: none; padding-left: 0; }
+    .pubs li { margin: 0.6rem 0; }
+    .meta { color: var(--muted); font-size: 0.95rem; }
+
+    footer { border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem; color: var(--muted); font-size: 0.95rem; }
+    .social a { margin-right: 0.75rem; color: var(--muted); text-decoration: none; }
+    .social a:hover { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
+
+    .skip { position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+    .skip:focus { position: static; width: auto; height: auto; padding: 0.5rem; background: var(--fg); color: var(--bg); border-radius: 0.5rem; }
+
+    .paper-info { color: var(--muted); font-size: 0.9rem; font-weight: 300; margin-left: 0.4rem; }
+    .paper-info strong { font-weight: 500; color: var(--muted); }
+    .paper-info a { color: var(--muted); text-decoration: none; }
+    .paper-info a:hover { text-decoration: underline; }
+
+    details p { text-align: justify; }
   </style>
 </head>
 <body>
-  <nav class="nav">
-    <div class="nav-in">
-      <div class="brand"><a href="#top">Alessandro Santirocchi</a></div>
-      <div class="menu">
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="container">
+    <header>
+      <img src="me.jpg" alt="Portrait of Alessandro Santirocchi" class="profile-rect" />
+      <div class="header-text">
+        <h1>Alessandro Santirocchi</h1>
+        <p class="tagline">Postdoctoral Researcher · Sapienza University of Rome</p>
+        <a class="btn" href="CV.pdf" aria-label="Download CV as PDF">Download CV</a>
+        <nav aria-label="Primary">
+          <a href="#research">Research</a>
+          <a href="#resources">Resources</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
-    </div>
-  </nav>
+    </header>
 
-  <main id="top" class="wrap">
-    <section class="hero">
-      <div class="avatar">AS</div>
-      <div>
-        <h1>Ricercatore in Psicologia Cognitiva & Neuroscienze del Comportamento</h1>
-        <p>Post‑doc, Dipartimento di Psicologia — Sapienza Università di Roma. Memoria, disinformazione, deepfakes, decision‑making; effetti dei colpi ripetuti alla testa (RHI) negli sport da contatto.</p>
-        <div class="chips">
-          <span class="chip">Memory</span><span class="chip">Misinformation</span><span class="chip">Deepfakes</span><span class="chip">Decision‑Making</span><span class="chip">RHI</span>
-        </div>
-        <div class="btns">
-          <a class="btn primary" href="#publications">Pubblicazioni</a>
-          <a class="btn" href="mailto:alessandro.santirocchi@uniroma1.it">Contatti</a>
-          <a class="btn" href="./CV_Alessandro_Santirocchi.pdf" target="_blank" rel="noopener">CV</a>
-        </div>
-      </div>
-    </section>
+    <main id="main" tabindex="-1">
+      <section id="about">
+        <p class="lead">
+          I am a Postdoctoral Researcher in Cognitive Psychology at Sapienza University of Rome. My research focuses on memory, misinformation, and cognitive processes underlying decision-making.
+        </p>
+      </section>
 
-    <section id="research">
-      <h2>Research</h2>
-      <div class="grid g-3">
-        <article class="card"><strong>Misinformation Susceptibility Test (MIST)</strong><div class="meta">Adattamento italiano · Collab. Cambridge SDML</div><p>Sviluppo/validazione, affidabilità e network analysis della suscettibilità alla disinformazione.</p></article>
-        <article class="card"><strong>Deepfakes, Memory & Trust</strong><div class="meta">GAN/StyleGAN · discriminazione & riconoscimento</div><p>Impatto dell’iperrealismo dei volti sintetici su percezione, encoding mnestico e giudizi socio‑affettivi.</p></article>
-        <article class="card"><strong>Repetitive Head Impacts (RHI)</strong><div class="meta">Muay Thai & rugby · MST · biomarcatori</div><p>Alterazioni cognitive/sensoriali via compiti ippocampo‑dipendenti e biomarcatori olfattivi/ematici.</p></article>
-      </div>
-    </section>
+      <section id="research">
+        <h2>Research</h2>
+        <ul>
+          <li>
+            <strong>Memory, Deepfakes, and Human Perception</strong>
+            <details>
+              <summary>Abstract</summary>
+              <p>
+                My work investigates how hyperrealistic AI-generated faces (deepfakes) influence visual perception, trust, and memory encoding. Through behavioral experiments and recognition paradigms, I explore how authenticity beliefs and affective cues shape cognitive responses.
+              </p>
+            </details>
+          </li>
 
-    <section id="teaching">
-      <h2>Teaching</h2>
-      <div class="grid g-2">
-        <div class="card"><strong>Elementi di Psicologia Forense</strong> — LUMSA (24/25)<div class="meta">Testimonianza, memoria, suggestibilità, IA nella valutazione delle prove.</div></div>
-        <div class="card"><strong>Psicologia della Comunicazione</strong> — Sapienza<div class="meta">Comunicazione, emozioni, misinformation, metodi sperimentali.</div></div>
-      </div>
-    </section>
-
-    <section id="publications">
-      <h2>Publications (selected)</h2>
-      <div class="card">
-        <ul class="list">
-          <li><strong>Exploring Pattern Separation and Cognitive Functions in Combat and Contact Sports Athletes</strong><div class="meta">Santirocchi A. et al., 2025 — under review · <a href="#" target="_blank" rel="noopener">preprint/DOI</a></div></li>
-          <li><strong>Deepfakes and Human Memory: Hyperrealism, Trust, and Recognition</strong><div class="meta">in preparation · <a href="#" target="_blank" rel="noopener">manuscript</a></div></li>
-          <li><strong>Political Orientation and Belief in Climate Conspiracies</strong><div class="meta">Psychonomic Society — abstract · <a href="#" target="_blank" rel="noopener">slides</a></div></li>
+          <li>
+            <strong>Misinformation Susceptibility and Decision-Making</strong>
+            <details>
+              <summary>Abstract</summary>
+              <p>
+                This line of research examines how emotional and cognitive factors influence susceptibility to misinformation. Using network psychometrics and path models, I study predictors of belief formation and correction across different contexts such as health and climate communication.
+              </p>
+            </details>
+          </li>
         </ul>
-        <p class="meta">Altro su <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://orcid.org" target="_blank" rel="noopener">ORCID</a> · <a href="https://www.researchgate.net/" target="_blank" rel="noopener">ResearchGate</a></p>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p><strong>Email</strong>: <a href="mailto:alessandro.santirocchi@uniroma1.it">alessandro.santirocchi@uniroma1.it</a><br>
-        <strong>Affiliazione</strong>: Dipartimento di Psicologia, Sapienza Università di Roma</p>
-      </div>
-    </section>
+      <section id="resources">
+        <h2>Resources</h2>
+        <ul>
+          <li><a href="slides_communication.pdf">Communication and Emotion in Psychology (Slides)</a></li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:alessandro.santirocchi@uniroma1.it">alessandro.santirocchi@uniroma1.it</a></p>
+        <p class="social">
+          <a href="https://github.com/alessandrosantirocchi">GitHub</a>
+          <a href="https://www.linkedin.com/in/alessandro-santirocchi/">LinkedIn</a>
+        </p>
+      </section>
+    </main>
 
     <footer>
-      © <span id="y"></span> Alessandro Santirocchi · Hosted on GitHub Pages · Ultimo aggiornamento: <span id="m"></span>
+      <div>© <span id="y"></span> Alessandro Santirocchi</div>
     </footer>
-  </main>
+  </div>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
-    document.getElementById('m').textContent = new Date(document.lastModified).toLocaleDateString('it-IT');
   </script>
 </body>
 </html>
